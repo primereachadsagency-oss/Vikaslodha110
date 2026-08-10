@@ -1,106 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free Market Education – Start Today</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>King of Nifty | Premium Trading Signals</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Sora:wght@600;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --gold-dark: #B8860B;
+            --pitch-black: #000000;
+            --dark-grey: #0a0a0a;
+        }
 
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+        * {
+            font-family: 'Outfit', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Free Market Education – Start Today">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop">
+        body {
+            background-color: var(--pitch-black);
+            color: white;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
 
-  <!-- Minimal CSS (inline for speed) -->
-  <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #00f0ff;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
-    }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
-    }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
-    }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
-    }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
-    }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
-  </style>
+        h1, h2, .sora {
+            font-family: 'Sora', sans-serif;
+        }
+
+        /* Pure Dark Background with Subtle Chart Vibe */
+        .hero-bg {
+            background: 
+                linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+                linear-gradient(120deg, #0a0a0a 0%, #000000 100%);
+            position: relative;
+        }
+
+        /* Subtle Grid Pattern for Trading Vibe */
+        .grid-pattern {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255, 215, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 215, 0, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 70%);
+            -webkit-mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        /* Dark Glassmorphism Card */
+        .dark-glass {
+            background: rgba(15, 15, 15, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .dark-glass:active {
+            transform: scale(0.98);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        /* Gold Gradient Text */
+        .gold-text {
+            background: linear-gradient(to right, #FFD700, #FFFACD, #B8860B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glowing Gold CTA Button */
+        .cta-btn {
+            position: relative;
+            background: linear-gradient(90deg, #FFD700, #B8860B);
+            color: #000;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3), inset 0 1px 1px rgba(255,255,255,0.5);
+            z-index: 2;
+        }
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #FFD700, #B8860B);
+            filter: blur(20px);
+            opacity: 0.5;
+            z-index: -1;
+            transition: opacity 0.3s;
+        }
+        .cta-btn:active {
+            transform: scale(0.96);
+        }
+
+        /* Floating Animation for Logo Container */
+        .logo-container {
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Hide scrollbar */
+        ::-webkit-scrollbar { display: none; }
+    </style>
 </head>
-<body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Free Market Education – Start Today</h1>
-    <p class="sub">Learn index behaviour & risk management</p>
+<body class="min-h-screen flex flex-col items-center justify-start hero-bg">
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+    <!-- Background Grid -->
+    <div class="grid-pattern"></div>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+    <!-- Main Mobile Container -->
+    <div class="w-full max-w-md mx-auto flex flex-col min-h-screen px-6 py-10 relative z-10">
+        
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center text-center mt-8">
+            <!-- Linked Image Logo -->
+            <a href="https://t.me/+umDgl6x97CllNjVl" target="_blank" class="logo-container relative w-32 h-32 mb-6 block rounded-full overflow-hidden border-2 border-yellow-500/50">
+                <img src="King.jpeg" alt="King of Nifty Academy" class="w-full h-full object-cover">
+            </a>
+            
+            <h1 id="brand-name" class="text-4xl font-extrabold tracking-wide sora">
+                KING OF <span class="gold-text">NIFTY</span>
+            </h1>
+            <p id="tagline" class="text-gray-500 mt-2 text-xs tracking-[0.3em] uppercase">India’s #1 Trading Community</p>
+        </div>
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp27.html" rel="nofollow">Start Learning</a>
+        <!-- Value Points (Dark Glass Cards) -->
+        <div id="features" class="grid grid-cols-1 gap-3 mt-10 mb-auto">
+            
+            <!-- Card 1 -->
+            <div class="feature-card dark-glass rounded-2xl p-4 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-yellow-500/5 border border-yellow-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg text-white">98% Accuracy Rate</h3>
+                    <p class="text-gray-500 text-sm">Expert technical analysis & research.</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+            <!-- Card 2 -->
+            <div class="feature-card dark-glass rounded-2xl p-4 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-yellow-500/5 border border-yellow-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg text-white">Instant Live Alerts</h3>
+                    <p class="text-gray-500 text-sm">Real-time entry & exit on Telegram.</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+            <!-- Card 3 -->
+            <div class="feature-card dark-glass rounded-2xl p-4 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-yellow-500/5 border border-yellow-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg text-white">50,000+ Traders</h3>
+                    <p class="text-gray-500 text-sm">Join the fastest-growing family.</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
-  </main>
+        </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+        <!-- Main CTA Section -->
+        <div id="cta-section" class="mt-8 mb-4 text-center relative">
+            <div class="absolute inset-x-4 top-2 bottom-2 bg-yellow-500/20 blur-2xl rounded-full -z-10"></div>
+            
+            <a href="https://t.me/+umDgl6x97CllNjVl" target="_blank" class="cta-btn w-full block py-5 rounded-2xl text-lg uppercase tracking-wider mb-4">
+                <div class="flex items-center justify-center space-x-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.327-.912.487-1.297.487-.428 0-1.254-.243-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.892-.662 3.516-1.532 5.858-2.543 7.027-3.033 3.344-1.39 4.035-1.634 4.487-1.642z"/></svg>
+                    <span>Join Free Telegram</span>
+                </div>
+            </a>
+            <p class="text-gray-600 text-[10px] tracking-widest uppercase">100% Free • Limited Slots Available</p>
+        </div>
+
+    </div>
+
+    <!-- Fixed Bottom Sticky CTA Button -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-black/80 backdrop-blur-md border-t border-white/10 z-50 flex justify-center">
+        <a href="https://t.me/+umDgl6x97CllNjVl" target="_blank" class="cta-btn w-full max-w-md block py-3.5 rounded-xl text-base uppercase tracking-wider text-center">
+            <div class="flex items-center justify-center space-x-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.327-.912.487-1.297.487-.428 0-1.254-.243-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.892-.662 3.516-1.532 5.858-2.543 7.027-3.033 3.344-1.39 4.035-1.634 4.487-1.642z"/></svg>
+                <span>Join Channel Now</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- GSAP Script for Animations -->
+    <script>
+        const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.8 } });
+
+        tl.from(".logo-container", { scale: 0.5, opacity: 0, delay: 0.2 })
+          .from("#brand-name", { y: 20, opacity: 0 }, "-=0.4")
+          .from("#tagline", { y: 20, opacity: 0 }, "-=0.6")
+          .from(".feature-card", { y: 40, opacity: 0, stagger: 0.2 }, "-=0.4")
+          .from("#cta-section", { y: 30, opacity: 0 }, "-=0.4");
+
+        // Continuous pulsing glow on CTA buttons
+        gsap.to(".cta-btn::after", {
+            opacity: 0.8,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+        
+        // Pulse buttons slightly
+        gsap.to(".cta-btn", {
+            scale: 1.02,
+            duration: 1.2,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+            delay: 1.5
+        });
+    </script>
 </body>
 </html>
