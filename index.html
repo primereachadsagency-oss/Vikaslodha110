@@ -162,8 +162,21 @@ src="https://www.facebook.com/tr?id=1585519763218643&ev=PageView&noscript=1"
             <p id="tagline" class="text-gray-500 mt-2 text-xs tracking-[0.3em] uppercase">India’s #1 Trading Community</p>
         </div>
 
+        <!-- Main CTA Section (Moved Up Above Features) -->
+        <div id="cta-section" class="mt-6 mb-6 text-center relative">
+            <div class="absolute inset-x-4 top-2 bottom-2 bg-yellow-500/20 blur-2xl rounded-full -z-10"></div>
+            
+            <a href="https://t.me/+umDgl6x97CllNjVl" target="_blank" class="cta-btn w-full block py-5 rounded-2xl text-lg uppercase tracking-wider mb-2">
+                <div class="flex items-center justify-center space-x-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.327-.912.487-1.297.487-.428 0-1.254-.243-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.892-.662 3.516-1.532 5.858-2.543 7.027-3.033 3.344-1.39 4.035-1.634 4.487-1.642z"/></svg>
+                    <span>Join Free Telegram</span>
+                </div>
+            </a>
+            <p class="text-gray-600 text-[10px] tracking-widest uppercase">100% Free • Limited Slots Available</p>
+        </div>
+
         <!-- Value Points (Dark Glass Cards) -->
-        <div id="features" class="grid grid-cols-1 gap-3 mt-10 mb-auto">
+        <div id="features" class="grid grid-cols-1 gap-3 mt-2 mb-auto">
             
             <!-- Card 1 -->
             <div class="feature-card dark-glass rounded-2xl p-4 flex items-center space-x-4">
@@ -203,19 +216,6 @@ src="https://www.facebook.com/tr?id=1585519763218643&ev=PageView&noscript=1"
 
         </div>
 
-        <!-- Main CTA Section -->
-        <div id="cta-section" class="mt-8 mb-4 text-center relative">
-            <div class="absolute inset-x-4 top-2 bottom-2 bg-yellow-500/20 blur-2xl rounded-full -z-10"></div>
-            
-            <a href="https://t.me/+umDgl6x97CllNjVl" target="_blank" class="cta-btn w-full block py-5 rounded-2xl text-lg uppercase tracking-wider mb-4">
-                <div class="flex items-center justify-center space-x-3">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.327-.912.487-1.297.487-.428 0-1.254-.243-1.865-.442-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.892-.662 3.516-1.532 5.858-2.543 7.027-3.033 3.344-1.39 4.035-1.634 4.487-1.642z"/></svg>
-                    <span>Join Free Telegram</span>
-                </div>
-            </a>
-            <p class="text-gray-600 text-[10px] tracking-widest uppercase">100% Free • Limited Slots Available</p>
-        </div>
-
     </div>
 
     <!-- Fixed Bottom Sticky CTA Button -->
@@ -235,8 +235,8 @@ src="https://www.facebook.com/tr?id=1585519763218643&ev=PageView&noscript=1"
         tl.from(".logo-container", { scale: 0.5, opacity: 0, delay: 0.2 })
           .from("#brand-name", { y: 20, opacity: 0 }, "-=0.4")
           .from("#tagline", { y: 20, opacity: 0 }, "-=0.6")
-          .from(".feature-card", { y: 40, opacity: 0, stagger: 0.2 }, "-=0.4")
-          .from("#cta-section", { y: 30, opacity: 0 }, "-=0.4");
+          .from("#cta-section", { y: 20, opacity: 0 }, "-=0.4")
+          .from(".feature-card", { y: 40, opacity: 0, stagger: 0.2 }, "-=0.4");
 
         // Continuous pulsing glow on CTA buttons
         gsap.to(".cta-btn::after", {
